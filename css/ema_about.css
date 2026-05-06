@@ -1,0 +1,5 @@
+@media only screen and (max-width: 992px) {
+    nav > ul > li:nth-child(2) > a {
+        text-decoration: underline;
+    }
+}
