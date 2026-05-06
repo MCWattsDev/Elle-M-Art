@@ -1,0 +1,130 @@
+﻿/* Tabs */
+.tab-container {
+    padding-bottom: 60px;
+}
+
+.nav-bar {
+    width: 100%;
+    background-color: white;
+    position: sticky;
+}
+
+.tab-item {
+    cursor: pointer;
+    margin: 6px 0 0;
+    padding: 6px 10px 0;
+    font: 200 1.5rem Georgia, Tahoma, Verdana, sans-serif;
+    color: rgb(40, 40, 40);
+}
+
+.tab-item input {
+    display: none;
+}
+
+.tab-item:has(input:checked) {
+    background-color: rgb(246, 246, 246);
+}
+
+/* Galleries */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 50%;
+    margin: 0;
+    padding: 5px 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 25%;
+}
+
+/* Disabled for the time being, not enough content to break the tool-tips */
+/*.tooltip:nth-last-child(1) .tooltip-text {
+    top: -10%;
+}*/
+
+.tab-content {
+    display: none;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.tab-container:has(#achrom:checked) #achrom-content {
+    display: inline-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-evenly;
+    -webkit-justify-content: space-evenly;
+}
+
+.tab-container:has(#color:checked) #color-content {
+    display: inline-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-evenly;
+    -webkit-justify-content: space-evenly;
+}
+
+.gallery-column {
+    flex: 23%;
+    -webkit-flex: 23%;
+    max-width: 23%;
+}
+
+    .gallery-column img {
+        margin-top: 1rem;
+        vertical-align: middle;
+        width: 100%;
+        background-color: white;
+    }
+
+/* --Mobile Only-- */
+.mobile-desc {
+    display: none;
+}
+
+@media only screen and (min-width: 992px) {
+    .tooltip:hover .tooltip-text {
+        visibility: visible;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .gallery-column {
+        flex: 46%;
+        -webkit-flex: 46%;
+        max-width: 46%;
+    }
+
+    .mobile-desc {
+        display: block;
+    }
+
+    .mobile-text {
+        margin: 1rem 0 0;
+        text-align: center;
+        font-size: 1.1rem;
+        padding-top: 2px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery-column {
+        flex: 100%;
+        -webkit-flex: 100%;
+        max-width: 100%;
+    }
+
+    .mobile-text {
+        font-size: 1.3rem;
+    }
+}

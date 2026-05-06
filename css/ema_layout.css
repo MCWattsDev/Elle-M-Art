@@ -1,0 +1,117 @@
+﻿/* Body */
+body {
+    margin: 0px;
+}
+
+.body-container {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    font: 100 2rem Georgia, Tahoma, Verdana, sans-serif;
+}
+
+h2 {
+    font: 100 1.5rem Georgia, Tahoma, Verdana, sans-serif;
+}
+
+h1, h2 {
+    color: rgb(40, 40, 40);
+    margin: 20px 40px 0px;
+}
+
+p {
+    color: rgb(60, 60, 60);
+    margin: 20px 40px;
+    font: 1rem Arial, Tahoma, Verdana, sans-serif;
+}
+
+.main-link {
+    color: pink;
+    text-decoration: underline;
+}
+
+/* Nav */
+aside {
+    flex: 20%;
+    height: 100vh;
+    z-index: 2;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.site-title {
+    margin: 0px 10px;
+    padding-top: 15px;
+    text-align: center;
+    color: rgb(40, 40, 40);
+    font: 200 3.5rem Georgia, Tahoma, Verdana, sans-serif;
+}
+
+nav > ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+    nav > ul > li > a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 20px;
+        color: rgb(60, 60, 60);
+        font: 200 1.5rem Georgia, Tahoma, Verdana, sans-serif;
+    }
+
+        nav > ul > li > a:hover {
+            font-size:1.55rem;
+            background-color: rgb(244, 244, 244);
+        }
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    padding: 0 0 30px;
+}
+
+/* Socials */
+.social-container {
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+    background-color: white;
+}
+
+.social-icon {
+    width: 36px;
+    height: auto;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+
+.social-link > a {
+    font-weight: bold;
+    color: pink;
+}
+
+.social-link > a:visited {
+    color: pink;
+}
+
+/* Main */
+main {
+    display: flex;
+    flex: 80%;
+    height: 100vh;
+    background-color: rgb(246, 246, 246);
+}
+
+/* Mobile Menu */
+@media only screen and (max-width: 992px) {
+    aside {
+        display: none;
+    }
+}

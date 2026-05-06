@@ -1,0 +1,16 @@
+/* Font */
+h2 {
+    margin-top: 30px;
+}
+
+    h2:nth-of-type(1) {
+        margin-top: 20px;
+    }
+
+a {
+    font-weight: bold;
+}
+
+p:nth-of-type(2) {
+    margin-top: 10px;
+}
