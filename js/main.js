@@ -74,7 +74,7 @@ if (body.classList.contains("contact")) {
             return;
         } else {
             e.preventDefault();
-            window.location.href = "/ema_thanks.html";
+            window.location.href = "/Elle-M-Art/ema_thanks.html";
         }
     });
 }
