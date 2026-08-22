@@ -1,8 +1,17 @@
-#thank-you {
+h1, p { /* Centers text */
+    display: flex;
+    justify-content: center;
+}
+
+.thank-you { /* Gives div 100% width of its container */
     width: 100%;
 }
 
-h1, p {
-    display: flex;
-    justify-content: center;
+    .thank-you > p:nth-child(3) { /* Sets third paragraph to red and bold */
+        color: red;
+        font-weight: bold;
+    }
+
+#social-link {  /* Bolds Instagram */
+    font-weight: bold;
 }

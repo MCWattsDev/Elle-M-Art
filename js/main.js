@@ -2,14 +2,18 @@ let slideNum = 1;
 const homeSlide = document.getElementById("home-slide");
 const achromSlide = document.getElementById("achrom-slide");
 const colorSlide = document.getElementById("color-slide");
-dispSlide(slideNum, homeSlide);
+const body = document.querySelector("body");
+
+if (body.classList.contains("home")) {
+    dispSlide(slideNum, homeSlide);
+}
 
 function openModal(slider) { // Toggles the modal divs display "on"
-  slider.style.display = "block";
+    slider.style.display = "block";
 }
 
 function closeModal(slider) { // Toggles the modal divs display "off"
-  slider.style.display = "none";
+    slider.style.display = "none";
 }
 
 function changeSlide(slide, slider) { // Adds and "subtracts" value from change slide function and sets displayed slide to new value
@@ -27,7 +31,7 @@ function dispSlide(slide, slider) {
     const achromCaption = document.getElementById("achrom-caption");
     const colorCaption = document.getElementById("color-caption");
 
-    if (slide === undefined && autoplay === true) { // Prevents slide from being undefined on automated loop and sets/resets slide interval
+    if (slide === undefined) { // Prevents slide from being undefined on automated loop and sets/resets slide interval
         slide = ++slideNum;
     }
 
@@ -58,5 +62,33 @@ function dispSlide(slide, slider) {
     if (slider !== homeSlide) { // Matches alt text to caption for images in lightbox
         achromCaption.innerHTML = dots[slideNum - 1].alt;
         colorCaption.innerHTML = dots[slideNum - 1].alt;
+    }
+}
+
+const form = document.getElementById("contact-form");
+
+if (body.classList.contains("contact")) {
+    form.addEventListener("submit", (e) => { // Prevents form from submitting if emails do not match and redirects to thank you page on a match
+        if (!emailValidation()) {
+            e.preventDefault();
+            return;
+        } else {
+            e.preventDefault();
+            window.location.href = "/ema_thanks.html";
+        }
+    });
+}
+
+function emailValidation() { // Converts emails to lowercase and compares to validate that they match
+    const emailOne = document.getElementById("email");
+    const emailTwo = document.getElementById("conf-email");
+    const oneLC = emailOne.value.toLowerCase();
+    const twoLC = emailTwo.value.toLowerCase();
+
+    if (oneLC !== twoLC) {
+        emailTwo.setCustomValidity("Email does not match");
+        return false;
+    } else {
+        return true;
     }
 }
