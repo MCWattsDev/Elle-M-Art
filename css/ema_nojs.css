@@ -1,0 +1,84 @@
+.slides { /* Animation style and timing */
+    display: inline-block;
+    will-change: transform;
+    animation: slide 30s ease infinite;
+    -moz-animation: slide 30s ease infinite;
+    -webkit-animation: slide 30s ease infinite;
+}
+
+.prev, .next { /* Toggles display for next and prev buttons without JS */
+    display: none;
+}
+
+.id-dots > div { /* Gives slide dots ability to animate */
+    display: inline-block;
+    background: none;
+    will-change: transform;
+}
+
+    .id-dots > div:nth-child(1) { /* Animates dots by targeting div children of id-dots */
+        animation: dotOneColor 30s linear infinite;
+        -moz-animation: dotOneColor 30s linear infinite;
+        -webkit-animation: dotOneColor 30s linear infinite;
+    }
+
+    .id-dots > div:nth-child(2) {
+        animation: dotTwoColor 30s linear infinite;
+        -moz-animation: dotTwoColor 30s linear infinite;
+        -webkit-animation: dotTwoColor 30s linear infinite;
+    }
+
+    .id-dots > div:nth-child(3) {
+        animation: dotThreeColor 30s linear infinite;
+        -moz-animation: dotThreeColor 30s linear infinite;
+        -webkit-animation: dotThreeColor 30s linear infinite;
+    }
+
+main:hover div { /* Pauses animation when user hovers mouse over  */
+    animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+.js-img { /* Hides the modal linked image when JS is disabled */
+    display: none;
+}
+
+form { /* Hides the form element when JS is disabled */
+    display: none;
+}
+
+@keyframes slide {
+    /* Slides are technically one long object, this moves that object by -100% to simulate the slides moving,
+       returns to origin at the end to hide the slide shows reset */
+    0%, 100% {
+        transform: translateX(0);
+        -moz-transform: translateX(0);
+        -webkit-transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+        -moz-transform: translateX(-200%);
+        -webkit-transform: translateX(-200%);
+    }
+}
+
+@keyframes dotOneColor { /* Sets the color of the dots to match current slide simulating selection and allowing the user to see slide total */
+    0%, 100% {background: rgba(255, 255, 255, 0.5);}
+    33%, 66% {background: rgba(0, 0, 0, 0.5);}
+}
+
+@keyframes dotTwoColor {
+    0%, 66%, 100% {background: rgba(0, 0, 0, 0.5);}
+    33% {background: rgba(255, 255, 255, 0.5);}
+}
+
+@keyframes dotThreeColor {
+    0%, 33%, 100% {background: rgba(0, 0, 0, 0.5);}
+    66% {background: rgba(255, 255, 255, 0.5);}
+}

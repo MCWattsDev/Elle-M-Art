@@ -1,24 +1,29 @@
 ﻿<!DOCTYPE html>
 
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Elle M" />
-    <meta name="description" content="A portfolio of all Elle M's artwork with a large focus on portraiture." />
-    <meta name="keywords" content="art, drawing, painting, Elle M Art, Elle M, portraiture, portraits" />
-    <title>Elle M Art &#9829; Home</title>
-    <link href="css/reset.css" rel="stylesheet" />
-    <link href="css/ema_layout.css" rel="stylesheet" />
-    <link href="css/ema_home.css" rel="stylesheet" />
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Elle M" />
+        <meta name="description" content="A portfolio of all Elle M's artwork with a large focus on portraiture." />
+        <meta name="keywords" content="art, drawing, painting, Elle M Art, Elle M, portraiture, portraits" />
+
+        <title>Elle M Art &#9829; Home</title>
+
+        <link href="css/reset.css" rel="stylesheet" />
+        <link href="css/ema_layout.css" rel="stylesheet" />
+        <link href="css/ema_home.css" rel="stylesheet" />
+        <noscript> <!-- A backup CSS file should the user have JS disabled in their browser, allows the slides to keep animating just without the user controls -->
+            <link href="css/ema_nojs.css" rel="stylesheet" />
+        </noscript>
+    </head>
 
     <body>
         <div class="body-container">
-            <aside>
+            <aside> <!-- Side bar for navigation and social containers -->
                 <p class="site-title">ELLE M</p>
 
-                <div class="nav-container">
+                <div class="nav-container"> <!-- Navigational bar container -->
                     <nav>
                         <ul>
                             <li><a>Home</a></li>
@@ -29,7 +34,7 @@
                     </nav>
                 </div>
 
-                <div class="social-container">
+                <div class="social-container"> <!-- Social links container -->
                     <div>
                         <img class="social-icon" src="images/icons8-instagram-48.png" alt="instagram icon" />
                         <strong class="social-link"><a href="https://www.instagram.com/elllem.art">Instagram</a></strong>
@@ -37,18 +42,24 @@
                 </div>
             </aside>
 
-            <main>
-                <div class="slider">
+            <main id="home-slide"> <!-- Primary content for all pages -->
+                <div class="slider"> <!-- Slide show image containers and next/previous arrows -->
                     <div class="slides"></div>
                     <div class="slides"></div>
                     <div class="slides"></div>
+
+                    <a class="prev" onclick="changeSlide(-1, homeSlide)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1, homeSlide)">&#10095;</a>
                 </div>
-                <div class="id-dots">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+
+                <div class="id-dots"> <!-- Slide show dots for VFX/slide count -->
+                    <div class="dots" onclick="currSlide(1, homeSlide)"></div>
+                    <div class="dots" onclick="currSlide(2, homeSlide)"></div>
+                    <div class="dots" onclick="currSlide(3, homeSlide)"></div>
                 </div>
             </main>
         </div>
+
+        <script src="js/main.js"></script>
     </body>
 </html>

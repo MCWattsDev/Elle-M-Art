@@ -1,4 +1,4 @@
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) { /* Underlines page title for visual selection on mobile website */
     nav > ul > li:nth-child(2) > a {
         text-decoration: underline;
     }

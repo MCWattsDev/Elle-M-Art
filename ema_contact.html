@@ -1,14 +1,19 @@
 ﻿<!DOCTYPE html>
 
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Elle M Art &#9829; Contact</title>
-    <link href="css/reset.css" rel="stylesheet" />
-    <link href="css/ema_layout.css" rel="stylesheet" />
-    <link href="css/ema_contact.css" rel="stylesheet" />
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Elle M Art &#9829; Contact</title>
+
+        <link href="css/reset.css" rel="stylesheet" />
+        <link href="css/ema_layout.css" rel="stylesheet" />
+        <link href="css/ema_contact.css" rel="stylesheet" />
+        <noscript>
+            <link href="css/ema_nojs.css" rel="stylesheet" />
+        </noscript>
+    </head>
 
     <body>
         <div class="body-container">
@@ -18,7 +23,7 @@
                 <div class="nav-container">
                     <nav>
                         <ul>
-                            <li><a href="/Elle-M-Art/">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="ema_about.html">About</a></li>
                             <li><a href="ema_gallery.html">Gallery</a></li>
                             <li><a>Contact</a></li>
@@ -38,7 +43,7 @@
                 <div>
                     <h1>Reach Out</h1>
 
-                    <h2>Placeholder Title</h2>
+                    <h2>Placeholder Title</h2> <!-- Placeholder text until she decides what to write here -->
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -47,11 +52,31 @@
                     </p>
 
                     <h2><strong>Email</strong></h2>
-                    <p>
-                        <a class="main-link" href="mailto:ellem.artist@gmail.com">ellem.artist@gmail.com</a>
-                    </p>
+
+                    <form id="contact-form" name="contact-form"> <!-- Contact form with name, email, subject, and body fields -->
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Enter your name here" required /><br><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required /><br><br>
+                        <label for="conf-email">Confirm Email:</label><br>
+                        <input type="email" id="conf-email" name="conf-email" placeholder="email@example.com" required /><br><br>
+                        <label for="subject">Subject:</label><br>
+                        <input type="text" id="subject" name="subject" placeholder="Enter email subject here" maxlength="78" required /><br><br>
+                        <label for="message">Body:</label><br>
+                        <textarea id="message" name="message" placeholder="Enter email message here" rows="5" cols="40" required></textarea><br><br><br>
+                        <input type="submit" value="Submit" />
+                    </form>
+
+                    <noscript> <!-- Lets users know JS needs to be enabled for the form to work -->
+                        <p>
+                            Unfortunately the contact form does not work without JavaScript as it is needed for validation. 
+                            Please enable JavaScript in your browser if you would like to reach out, thank you.
+                        </p>
+                    </noscript>
                 </div>
             </main>
+
+            <script src="js/contact.js"></script>
         </div>
     </body>
 </html>

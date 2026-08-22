@@ -1,17 +1,31 @@
+/* Contact Form */
+form { /* Margin for form object */
+    margin: 20px 40px;
+}
+
+input, textarea { /* Spaces labels from their fields */
+    margin-top: 5px;
+}
+
+input, label, textarea { /* Styles inputs, labels, and textareas to match the site */
+    color: rgb(60, 60, 60);
+    font: 1rem Arial, Tahoma, Verdana, sans-serif;
+}
+
 /* Font */
-h2 {
+h2 { /* Adds top margin to the header */
     margin-top: 30px;
 }
 
-    h2:nth-of-type(1) {
+    h2:nth-of-type(1) { /* Adds top margin to the first h2 header only */
         margin-top: 20px;
     }
 
-a {
+a { /* Bolds all links, a tags specifically */
     font-weight: bold;
 }
 
-p:nth-of-type(2) {
+p:nth-of-type(2) { /* Adds top margin to second p tag */
     margin-top: 10px;
 }
 

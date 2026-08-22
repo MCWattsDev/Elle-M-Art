@@ -1,0 +1,8 @@
+#thank-you {
+    width: 100%;
+}
+
+h1, p {
+    display: flex;
+    justify-content: center;
+}

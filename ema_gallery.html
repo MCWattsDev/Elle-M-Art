@@ -1,14 +1,19 @@
 ﻿<!DOCTYPE html>
 
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Elle M Art &#9829 Gallery</title>
-    <link href="css/reset.css" rel="stylesheet" />
-    <link href="css/ema_layout.css" rel="stylesheet" />
-    <link href="css/ema_gallery.css" rel="stylesheet" />
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Elle M Art &#9829; Gallery</title>
+
+        <link href="css/reset.css" rel="stylesheet" />
+        <link href="css/ema_layout.css" rel="stylesheet" />
+        <link href="css/ema_gallery.css" rel="stylesheet" />
+        <noscript>
+            <link href="css/ema_nojs.css" rel="stylesheet" />
+        </noscript>
+    </head>
 
     <body>
         <div class="body-container">
@@ -18,7 +23,7 @@
                 <div class="nav-container">
                     <nav>
                         <ul>
-                            <li><a href="/Elle-M-Art/">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="ema_about.html">About</a></li>
                             <li><a>Gallery</a></li>
                             <li><a href="ema_contact.html">Contact</a></li>
@@ -35,141 +40,392 @@
             </aside>
 
             <main>
-                <div class="tab-container">
-                    <nav class="nav-bar">
-                        <label for="achrom" class="tab-item">
+                <div class="tab-container"> <!-- Container for the galleries/tabs -->
+                    <nav class="nav-bar"> <!-- Secondary nav bar for gallery tabs -->
+                        <label for="achrom" class="tab-item"> <!-- Psuedo form using radio buttons to toggle tabs -->
                             <input checked type="radio" id="achrom" name="gallery-tab" />
                             <span>Black and White</span>
                         </label>
+
                         <label for="color" class="tab-item">
                             <input type="radio" id="color" name="gallery-tab" />
                             <span>Color</span>
                         </label>
                     </nav>
 
-                    <div class="tab-content" id="achrom-content">
-                        <div class="gallery-column">
-                            <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom9.jpg"><img src="images/gallery/achroms/achrom9.jpg" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil & Charcoal<br /><b>Date:</b> 2022</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil & Charcoal<br /><b>Date:</b> 2022</p></div>
+                    <div class="tab-content" id="achrom-content"> <!-- Tab content for black and white photos -->
+                        <div class="gallery-column"> <!-- Column container for images and their tool tips -->
+                            <div class="tooltip"> <!-- Tooltip container so hovering the image always displays it -->
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(1, achromSlide)" src="images/gallery/achroms/achrom9.jpg" /> <!-- Image with modal link for JS users -->
+                                <noscript> <!-- Image with standard link for non JS users -->
+                                    <a target="_blank" href="images/gallery/achroms/achrom9.jpg"><img src="images/gallery/achroms/achrom9.jpg" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil & Charcoal<br><b>Date:</b> 2022</span> <!-- Actual tooltip text -->
+                                <div class="mobile-desc"><!-- Mobile image info since tooltips would not work -->
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil & Charcoal<br><b>Date:</b> 2022</p>
+                                </div>
                             </div>
+
                             <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom3.jpg"><img src="images/gallery/achroms/achrom3.jpg" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2021</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2021</p></div>
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(5, achromSlide)" src="images/gallery/achroms/achrom3.jpg" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom3.jpg"><img src="images/gallery/achroms/achrom3.jpg" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2021</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2021</p>
+                                </div>
                             </div>
+
                             <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom6.jpg"><img src="images/gallery/achroms/achrom6.jpg" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2022</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2022</p></div>
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(9, achromSlide)" src="images/gallery/achroms/achrom6.jpg" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom6.jpg"><img src="images/gallery/achroms/achrom6.jpg" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2022</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2022</p>
+                                </div>
                             </div>
+
                             <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom13.png"><img src="images/gallery/achroms/achrom13.png" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil & Charcoal<br /><b>Date:</b> 2023</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil & Charcoal<br /><b>Date:</b> 2023</p></div>
-                            </div>
-                        </div>
-                        <div class="gallery-column">
-                            <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom12.png"><img src="images/gallery/achroms/achrom12.png" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Charcoal<br /><b>Date:</b> 2025</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Charcoal<br /><b>Date:</b> 2025</p></div>
-                            </div>
-                            <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom2.jpg"><img src="images/gallery/achroms/achrom2.jpg" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2022</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2022</p></div>
-                            </div>
-                            <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom7.jpg"><img src="images/gallery/achroms/achrom7.jpg" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2021</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2021</p></div>
-                            </div>
-                            <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom4.jpg"><img src="images/gallery/achroms/achrom4.jpg" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2021</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2021</p></div>
-                            </div>
-                        </div>
-                        <div class="gallery-column">
-                            <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom10.jpg"><img src="images/gallery/achroms/achrom10.jpg" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Bella<br /><b>Medium:</b> Charcoal<br /><b>Date:</b> 2023</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Bella<br /><b>Medium:</b> Charcoal<br /><b>Date:</b> 2023</p></div>
-                            </div>
-                            <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom14.jpg"><img src="images/gallery/achroms/achrom14.jpg" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2024</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2024</p></div>
-                            </div>
-                            <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom8.jpg"><img src="images/gallery/achroms/achrom8.jpg" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil & Charcoal<br /><b>Date:</b> 2023</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil & Charcoal<br /><b>Date:</b> 2023</p></div>
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(13, achromSlide)" src="images/gallery/achroms/achrom13.png" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom13.png"><img src="images/gallery/achroms/achrom13.png" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil & Charcoal<br><b>Date:</b> 2023</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil & Charcoal<br><b>Date:</b> 2023</p>
+                                </div>
                             </div>
                         </div>
+
                         <div class="gallery-column">
                             <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom5.jpg"><img src="images/gallery/achroms/achrom5.jpg" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Jasper<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2022</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Jasper<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2022</p></div>
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(2, achromSlide)" src="images/gallery/achroms/achrom12.png" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom12.png"><img src="images/gallery/achroms/achrom12.png" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Charcoal<br><b>Date:</b> 2025</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Charcoal<br><b>Date:</b> 2025</p>
+                                </div>
                             </div>
+
                             <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom1.jpg"><img src="images/gallery/achroms/achrom1.jpg" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2022</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2022</p></div>
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(6, achromSlide)" src="images/gallery/achroms/achrom2.jpg" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom2.jpg"><img src="images/gallery/achroms/achrom2.jpg" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2022</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2022</p>
+                                </div>
                             </div>
+
                             <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom11.png"><img src="images/gallery/achroms/achrom11.png" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Charcoal<br /><b>Date:</b> 2025</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Charcoal<br /><b>Date:</b> 2025</p></div>
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(10, achromSlide)" src="images/gallery/achroms/achrom7.jpg" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom7.jpg"><img src="images/gallery/achroms/achrom7.jpg" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2021</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2021</p>
+                                </div>
                             </div>
+
                             <div class="tooltip">
-                                <a target="_blank" href="images/gallery/achroms/achrom15.png"><img src="images/gallery/achroms/achrom15.png" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2024</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Pencil<br /><b>Date:</b> 2024</p></div>
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(14, achromSlide)" src="images/gallery/achroms/achrom4.jpg" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom4.jpg"><img src="images/gallery/achroms/achrom4.jpg" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2021</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2021</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-column">
+                            <div class="tooltip">
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(3, achromSlide)" src="images/gallery/achroms/achrom10.jpg" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom10.jpg"><img src="images/gallery/achroms/achrom10.jpg" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Bella<br><b>Medium:</b> Charcoal<br><b>Date:</b> 2023</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Bella<br><b>Medium:</b> Charcoal<br><b>Date:</b> 2023</p>
+                                </div>
+                            </div>
+
+                            <div class="tooltip">
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(7, achromSlide)" src="images/gallery/achroms/achrom14.jpg" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom14.jpg"><img src="images/gallery/achroms/achrom14.jpg" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2024</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2024</p>
+                                </div>
+                            </div>
+
+                            <div class="tooltip">
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(11, achromSlide)" src="images/gallery/achroms/achrom8.jpg" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom8.jpg"><img src="images/gallery/achroms/achrom8.jpg" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil & Charcoal<br><b>Date:</b> 2023</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil & Charcoal<br><b>Date:</b> 2023</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-column">
+                            <div class="tooltip">
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(4, achromSlide)" src="images/gallery/achroms/achrom5.jpg" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom5.jpg"><img src="images/gallery/achroms/achrom5.jpg" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Jasper<br><b>Medium:</b> Pencil<br><b>Date:</b> 2022</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Jasper<br><b>Medium:</b> Pencil<br><b>Date:</b> 2022</p>
+                                </div>
+                            </div>
+
+                            <div class="tooltip">
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(8, achromSlide)" src="images/gallery/achroms/achrom1.jpg" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom1.jpg"><img src="images/gallery/achroms/achrom1.jpg" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2022</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2022</p>
+                                </div>
+                            </div>
+
+                            <div class="tooltip">
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(12, achromSlide)" src="images/gallery/achroms/achrom11.png" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom11.png"><img src="images/gallery/achroms/achrom11.png" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Charcoal<br><b>Date:</b> 2025</span>
+                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Charcoal<br><b>Date:</b> 2025</p></div>
+                            </div>
+
+                            <div class="tooltip">
+                                <img class="js-img" onclick="openModal(achromSlide);currSlide(15, achromSlide)" src="images/gallery/achroms/achrom15.png" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/achroms/achrom15.png"><img src="images/gallery/achroms/achrom15.png" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2024</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2024</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="tab-content" id="color-content">
-                        <div class="gallery-column">
-                            <div class="tooltip">
-                                <a target="_blank" href="images/gallery/color/color1.jpg"><img src="images/gallery/color/color1.jpg" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Doug<br /><b>Medium:</b> Gouache<br /><b>Date:</b> 2022</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Doug<br /><b>Medium:</b> Gouache<br /><b>Date:</b> 2022</p></div>
+                    <div id="achrom-slide" class="modal"> <!-- Container for the image modals -->
+                        <span class="close" onclick="closeModal(achromSlide)">&times;</span> <!-- Modal close button to restore site -->
+
+                        <div class="slider"> <!-- Container modal images, arrows, caption, and bottom slideshow -->
+                            <div class="slides"> <!-- Slide -->
+                                <img src="images/gallery/achroms/achrom9.jpg" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom12.png" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom10.jpg" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom5.jpg" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom3.jpg" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom2.jpg" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom14.jpg" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom1.jpg" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom6.jpg" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom7.jpg" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom8.jpg" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom11.png" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom13.png" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom4.jpg" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/achroms/achrom15.png" />
+                            </div>
+
+                            <a class="prev" onclick="changeSlide(-1, achromSlide)">&#10094;</a> <!-- Arrows -->
+                            <a class="next" onclick="changeSlide(1, achromSlide)">&#10095;</a>
+
+                            <div class="img-caption"> <!-- Image caption generated per image -->
+                                <p id="achrom-caption" class="caption"></p>
+                            </div>
+
+                            <div class="thumb-content"> <!-- Thumbnails or lower modal slideshow, also generates caption text -->
+                                <img class="dots" onclick="currSlide(1, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Pencil & Charcoal<br><b>Date:</b> 2022" src="images/gallery/achroms/achrom9.jpg" />
+                                <img class="dots" onclick="currSlide(2, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Charcoal<br><b>Date:</b> 2025" src="images/gallery/achroms/achrom12.png" />
+                                <img class="dots" onclick="currSlide(3, achromSlide)" alt="<b>Title:</b> Bella<br><b>Medium:</b> Charcoal<br><b>Date:</b> 2023" src="images/gallery/achroms/achrom10.jpg" />
+                                <img class="dots" onclick="currSlide(4, achromSlide)" alt="<b>Title:</b> Jasper<br><b>Medium:</b> Pencil<br><b>Date:</b> 2022" src="images/gallery/achroms/achrom5.jpg" />
+                                <img class="dots" onclick="currSlide(5, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2021" src="images/gallery/achroms/achrom3.jpg" />
+                                <img class="dots" onclick="currSlide(6, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2022" src="images/gallery/achroms/achrom2.jpg" />
+                                <img class="dots" onclick="currSlide(7, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2024" src="images/gallery/achroms/achrom14.jpg" />
+                                <img class="dots" onclick="currSlide(8, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2022" src="images/gallery/achroms/achrom1.jpg" />
+                                <img class="dots" onclick="currSlide(9, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2022" src="images/gallery/achroms/achrom6.jpg" />
+                                <img class="dots" onclick="currSlide(10, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2021" src="images/gallery/achroms/achrom7.jpg" />
+                                <img class="dots" onclick="currSlide(11, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Pencil & Charcoal<br><b>Date:</b> 2023" src="images/gallery/achroms/achrom8.jpg" />
+                                <img class="dots" onclick="currSlide(12, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Charcoal<br><b>Date:</b> 2025" src="images/gallery/achroms/achrom11.png" />
+                                <img class="dots" onclick="currSlide(13, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Pencil & Charcoal<br><b>Date:</b> 2023" src="images/gallery/achroms/achrom13.png" />
+                                <img class="dots" onclick="currSlide(14, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2021" src="images/gallery/achroms/achrom4.jpg" />
+                                <img class="dots" onclick="currSlide(15, achromSlide)" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Pencil<br><b>Date:</b> 2024" src="images/gallery/achroms/achrom15.png" />
                             </div>
                         </div>
+                    </div>
+
+                    <div class="tab-content" id="color-content"> <!-- Repetition of above code for secondary color gallery -->
                         <div class="gallery-column">
                             <div class="tooltip">
-                                <a target="_blank" href="images/gallery/color/color2.png"><img src="images/gallery/color/color2.png" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Colored Pencil<br /><b>Date:</b> 2019</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Colored Pencil<br /><b>Date:</b> 2019</p></div>
-                            </div>
-                            <div class="tooltip">
-                                <a target="_blank" href="images/gallery/color/color5.png"><img src="images/gallery/color/color5.png" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Bella<br /><b>Medium:</b> Acryllic<br /><b>Date:</b> 2019</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Bella<br /><b>Medium:</b> Acryllic<br /><b>Date:</b> 2019</p></div>
-                            </div>
-                        </div>
-                        <div class="gallery-column">
-                            <div class="tooltip">
-                                <a target="_blank" href="images/gallery/color/color3.png"><img src="images/gallery/color/color3.png" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Colored Pencil<br /><b>Date:</b> 2019</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Colored Pencil<br /><b>Date:</b> 2019</p></div>
+                                <img class="js-img" onclick="openModal(colorSlide);currSlide(1, colorSlide)" src="images/gallery/color/color1.jpg" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/color/color1.jpg"><img src="images/gallery/color/color1.jpg" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Doug<br><b>Medium:</b> Gouache<br><b>Date:</b> 2022</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Doug<br><b>Medium:</b> Gouache<br><b>Date:</b> 2022</p>
+                                </div>
                             </div>
                         </div>
+
                         <div class="gallery-column">
                             <div class="tooltip">
-                                <a target="_blank" href="images/gallery/color/color4.png"><img src="images/gallery/color/color4.png" /></a>
-                                <span class="tooltip-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Oil<br /><b>Date:</b> 2018</span>
-                                <div class="mobile-desc"><p class="mobile-text"><b>Title:</b> Untitled<br /><b>Medium:</b> Oil<br /><b>Date:</b> 2018</p></div>
+                                <img class="js-img" onclick="openModal(colorSlide);currSlide(2, colorSlide)" src="images/gallery/color/color2.png" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/color/color2.png"><img src="images/gallery/color/color2.png" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Colored Pencil<br><b>Date:</b> 2019</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Colored Pencil<br><b>Date:</b> 2019</p>
+                                </div>
+                            </div>
+                            
+                            <div class="tooltip">
+                                <img class="js-img" onclick="openModal(colorSlide);currSlide(5, colorSlide)" src="images/gallery/color/color5.png" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/color/color5.png"><img src="images/gallery/color/color5.png" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Bella<br><b>Medium:</b> Acryllic<br><b>Date:</b> 2019</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Bella<br><b>Medium:</b> Acryllic<br><b>Date:</b> 2019</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-column">
+                            <div class="tooltip">
+                                <img class="js-img" onclick="openModal(colorSlide);currSlide(3, colorSlide)" src="images/gallery/color/color3.png" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/color/color3.png"><img src="images/gallery/color/color3.png" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Colored Pencil<br><b>Date:</b> 2019</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Colored Pencil<br><b>Date:</b> 2019</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-column">
+                            <div class="tooltip">
+                                <img class="js-img" onclick="openModal(colorSlide);currSlide(4, colorSlide)" src="images/gallery/color/color4.png" />
+                                <noscript>
+                                    <a target="_blank" href="images/gallery/color/color4.png"><img src="images/gallery/color/color4.png" /></a>
+                                </noscript>
+                                <span class="tooltip-text"><b>Title:</b> Untitled<br><b>Medium:</b> Oil<br><b>Date:</b> 2018</span>
+                                <div class="mobile-desc">
+                                    <p class="mobile-text"><b>Title:</b> Untitled<br><b>Medium:</b> Oil<br><b>Date:</b> 2018</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="color-slide" class="modal">
+                        <span class="close" onclick="closeModal(colorSlide)">&times;</span>
+
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="images/gallery/color/color1.jpg" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/color/color2.png" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/color/color3.png" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/color/color4.png" />
+                            </div>
+
+                            <div class="slides">
+                                <img src="images/gallery/color/color5.png" />
+                            </div>
+
+                            <a class="prev" onclick="changeSlide(-1, colorSlide)">&#10094;</a>
+                            <a class="next" onclick="changeSlide(1, colorSlide)">&#10095;</a>
+
+                            <div class="img-caption">
+                                <p id="color-caption" class="caption"></p>
+                            </div>
+
+                            <div class="thumb-content">
+                                <img class="dots" alt="<b>Title:</b> Doug<br><b>Medium:</b> Gouache<br><b>Date:</b> 2022" onclick="currSlide(1, colorSlide)" src="images/gallery/color/color1.jpg" />
+                                <img class="dots" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Colored Pencil<br><b>Date:</b> 2019" onclick="currSlide(2, colorSlide)" src="images/gallery/color/color2.png" />
+                                <img class="dots" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Colored Pencil<br><b>Date:</b> 2019" onclick="currSlide(3, colorSlide)" src="images/gallery/color/color3.png" />
+                                <img class="dots" alt="<b>Title:</b> Untitled<br><b>Medium:</b> Oil<br><b>Date:</b> 2018" onclick="currSlide(4, colorSlide)" src="images/gallery/color/color4.png" />
+                                <img class="dots" alt="<b>Title:</b> Bella<br><b>Medium:</b> Acryllic<br><b>Date:</b> 2019" onclick="currSlide(5, colorSlide)" src="images/gallery/color/color5.png" />
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
         </div>
+
+        <script src="js/main.js"></script>
     </body>
 </html>
