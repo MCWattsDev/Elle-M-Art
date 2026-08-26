@@ -101,7 +101,7 @@
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 50px;
     left: 0;
     top: 0;
     width: 100%;
@@ -128,19 +128,13 @@
     }
 
 .thumb-content { /* Sizing and spacing for modal thumbnail slideshow */
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
     padding: 5px;
 }
 
-#color-slide > .slider > .thumb-content { /* Centers c gallery thumbnails since there are less */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.dots { /* Thumnail image style, sizing, and spacing */
+.dots { /* Thumbnail image style, sizing, and spacing */
     height: 100px;
     padding: 2px;
     opacity: 0.6;
